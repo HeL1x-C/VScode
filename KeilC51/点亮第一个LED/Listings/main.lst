@@ -1,0 +1,58 @@
+C51 COMPILER V9.60.7.0   MAIN                                                              09/21/2026 16:24:45 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: E:\Keil C51\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\mai
+                    -n.lst) TABS(2) OBJECT(.\Objects\main.obj)
+
+line level    source
+
+   1          #include"REG51.H"
+   2          
+   3          
+   4          sbit led1 = P2^0; // Define led1 as the first bit of port 2
+   5          sbit led2 = P2^1; // Define led2 as the second bit of port 2
+   6          sbit led3 = P2^2; // Define led3 as the third bit of port 2
+   7          sbit led4 = P2^3; // Define led4 as the fourth bit of port 2
+   8          sbit led5 = P2^4; // Define led5 as the fifth bit of port 2
+   9          sbit led6 = P2^5; // Define led6 as the sixth bit of port 2
+  10          sbit led7 = P2^6; // Define led7 as the seventh bit of port 2
+  11          
+  12          typedef unsigned char u8;
+  13          typedef unsigned int u16;
+  14          
+  15          
+  16          void delay10ms(u16 ten_us)
+  17          {
+  18   1          while(ten_us--);
+  19   1      }
+  20          
+  21          void main()
+  22          {
+  23   1          while(1)
+  24   1          {
+  25   2              led1 = 0; // Turn on led1
+  26   2              led2 = 0; // Turn on led2
+  27   2              led3 = 0; // Turn on led3
+  28   2              led4 = 0; // Turn on led4
+  29   2              led5 = 0; // Turn on led5
+  30   2      
+  31   2          }
+  32   1      
+  33   1          
+  34   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     23    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
