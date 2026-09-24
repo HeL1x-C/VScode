@@ -1,8 +1,8 @@
-BL51 BANKED LINKER/LOCATER V6.22                                                        09/17/2026  20:00:54  PAGE 1
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                    09/24/2026  14:36:19  PAGE 1
 
 
-BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
-H:\KEIL C51\C51\BIN\BL51.EXE .\Objects\STARTUP.obj TO .\Objects\Project PRINT (.\Listings\Project.m51) RAMSIZE (256)
+BL51 BANKED LINKER/LOCATER V6.22.4.0, INVOKED BY:
+E:\KEIL C51\C51\BIN\BL51.EXE .\Objects\STARTUP.obj TO .\Objects\Project PRINT (.\Listings\Project.m51) RAMSIZE (256)
 
 
 INPUT MODULES INCLUDED:
@@ -59,7 +59,7 @@ SYMBOL TABLE OF MODULE:  .\Objects\Project (?C_STARTUP)
   N:0000H         SYMBOL        XBPSTACK
   N:0000H         SYMBOL        XBPSTACKTOP
   N:0000H         SYMBOL        XDATALEN
-BL51 BANKED LINKER/LOCATER V6.22                                                      09/17/2026  20:00:54  PAGE 2
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  09/24/2026  14:36:19  PAGE 2
 
 
   N:0000H         SYMBOL        XDATASTART

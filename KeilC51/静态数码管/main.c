@@ -19,7 +19,7 @@ void main()
         BEEP = !BEEP;
         delay_10us(500);
 //        BEEP = 1;
- //       delay_10us(50000);
+//        delay_10us(50000);
     }
 
 }
