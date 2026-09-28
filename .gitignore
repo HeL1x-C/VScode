@@ -5,4 +5,8 @@
 *.log
 *.tmp
 *.htm
-
+*.lock
+*.lst
+*.m51
+*.obj
+*.hex
