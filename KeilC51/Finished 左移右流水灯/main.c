@@ -22,13 +22,13 @@ void main()
     {
         for(i=0;i<7;i++)
         {
-            LED_PORT = _crol_(LED_PORT);
+            LED_PORT = _crol_(LED_PORT,1);
             delay10us(50000);
         }
         
         for(i=0;i<7;i++)
         {
-            LED_PORT = _cror_(LED_PORT);
+            LED_PORT = _cror_(LED_PORT,1);
             delay10us(50000);
         }
 
