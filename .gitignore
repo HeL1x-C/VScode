@@ -11,4 +11,10 @@
 *.obj
 *.hex
 *.bronya
-
+*.pdb
+*.exe
+*.o
+*.bin
+.vscode/
+Thumbs.db
+.DS_Store
