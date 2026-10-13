@@ -16,6 +16,8 @@
 *.o
 *.bin
 *.lnp
+*.A51
+
 .vscode/
 Thumbs.db
 .DS_Store
