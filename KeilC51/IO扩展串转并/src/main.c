@@ -3,11 +3,13 @@
 typedef unsigned char u8;
 typedef unsigned int u16;
 
-sbit RCLK=P3^5;
+sbit R_CLK=P3^5;
 sbit SER=P3^4;
-sbit SCLK=P3^6;
+sbit SRCLK=P3^6;
 
-u8 ghc595buf[8]={0x01,0x02,0x04,0x08,0x10,0x20,0x40,0x80}
+#define LEDDZ_COL_PORT P0 
+
+u8 ghc595buf[8]={0x01,0x02,0x04,0x08,0x10,0x20,0x40,0x80};
 
 
 
@@ -20,10 +22,9 @@ void delayms(u16 ms)
     u16 i,j;
     for(i=ms;i>0;i--)
     {
-        for(j=110;j>0,j--)
+        for(j=110;j>0;j--);
     }
 }
-
 
 void hc595_write_data(u8 dat)
 {
@@ -32,15 +33,15 @@ void hc595_write_data(u8 dat)
     for(i=0;i<8;i++)
     {
         SER=dat>>7;
-        dat<<1;
-        RCLK=0;
+        dat<<=1;
+        SRCLK=0;
         delay10us(1);
-        RCLK=1;
+        SRCLK=1;
         delay10us(1);
     }
-    RCLK=0;
+    R_CLK=0;
     delay10us(1);
-    RCLK=1
+    R_CLK=1;
 }
 
 void main()
@@ -49,8 +50,11 @@ void main()
     LEDDZ_COL_PORT=0x00;
     while(1)
     {
-        hc595_write_data(0x00);
-        hc595_write_data(ghc595buf[1]);
-        delayms(500)
+        for(i=0;i<8;i++)
+        {
+            hc595_write_data(0x00);
+            hc595_write_data(ghc595buf[i]);
+            delayms(500);
+        }
     }
 }

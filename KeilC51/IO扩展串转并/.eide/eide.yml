@@ -1,5 +1,5 @@
-version: "3.6"
-name: IO扩展串转并
+version: "4.1"
+name: 89c52_sdcc_demo
 type: C51
 deviceName: null
 packDir: null
@@ -11,18 +11,53 @@ virtualFolder:
   folders: []
 dependenceList: []
 outDir: build
-miscInfo: {}
+miscInfo:
+  uid: 831662ee7b801c5951d126a9eb0d193d
 targets:
   Debug:
     cppPreprocessAttrs:
-      name: default
       defineList: []
       incList:
         - inc
       libList: []
     excludeList: []
-    toolchain: SDCC
+    settings:
+      debugger: unknown
+    toolchain: Keil_C51
     toolchainConfigMap:
+      GNU_SDCC_MCS51:
+        linkerScript: "null"
+        options:
+          version: 1
+          afterBuildTasks: []
+          asm-compiler: {}
+          beforeBuildTasks: []
+          c/cpp-compiler:
+            language-c: c99
+          global:
+            code-size: "8192"
+            iram-size: "128"
+            mem-model: small
+            optimize-type: speed
+            xram-size: "0"
+          linker:
+            output-format: elf
+            remove-unused-input-sections: true
+      Keil_C51:
+        options:
+          version: 2
+          afterBuildTasks: []
+          asm-compiler: {}
+          beforeBuildTasks: []
+          c/cpp-compiler:
+            optimization-level: level-8
+            optimization-type: SPEED
+          global:
+            ram-mode: SMALL
+            rom-mode: LARGE
+          linker:
+            output-format: elf
+            remove-unused: true
       SDCC:
         options:
           version: 3
@@ -30,7 +65,7 @@ targets:
           asm-compiler: {}
           beforeBuildTasks: []
           c/cpp-compiler:
-            language-c: c99
+            language-c: c89
           global:
             device: mcs51
             misc-controls: --iram-size 256 --xram-size 0 --code-size 8192
