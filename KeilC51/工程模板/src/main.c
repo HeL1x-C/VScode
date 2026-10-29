@@ -5,7 +5,7 @@ typedef unsigned char u8;
 ////
 void delay_10us(u16 ten_us)
 {
-    while(ten_us);
+    while(ten_us--);
 }
 void delay_1ms(u16 ms)
 {
