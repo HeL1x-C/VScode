@@ -34,7 +34,7 @@ void time0_init(void)
 
 void main()
 {
-    time0_init();/;;
+    time0_init();
     while(1)
     {
 
